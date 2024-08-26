@@ -1,0 +1,15 @@
+.footer-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2,1fr);
+
+  .mapa-container{
+    display: flex;
+    justify-content: center;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+

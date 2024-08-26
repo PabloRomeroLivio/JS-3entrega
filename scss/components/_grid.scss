@@ -1,0 +1,21 @@
+
+
+.grid-container-referencia {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  align-items: center;
+  margin: auto;
+}
+
+
+.col-md-4 {
+  border: 1px solid black;
+  padding: 20px;
+  align-items: center;
+}
+
+.tamaño-img {
+  width: 40%;
+}

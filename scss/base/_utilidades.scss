@@ -1,0 +1,19 @@
+$colores-cookies: (
+  cookie-clasica:rgb(185, 163, 163),
+  cookie-brownie:rgb(186, 186, 36),
+  cookie-limon:rgb(117, 168, 40),
+  cookie-dulce-de-leche:rgb(105, 41, 41),
+  cookie-avellanas:rgb(93, 29, 81),
+  cookie-de-chocolate-blanco:rgb(50, 30, 109),
+);
+
+
+@each $key, $valor in $colores-cookies {
+  .cf-#{$key} {
+    background: $valor;
+    border-radius: 10px;
+    &:hover {
+      background-color: darken($valor, 10%);
+    }
+  }  
+}

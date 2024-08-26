@@ -1,0 +1,15 @@
+
+@media only screen and (max-width: 1364px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr); 
+  }
+  .grid-container-referencia {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .footer-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
