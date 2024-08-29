@@ -1,7 +1,5 @@
 .footer-container {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2,1fr);
+    @include grid (2, 1, 5px);
 
   .mapa-container{
     display: flex;
@@ -12,4 +10,6 @@
     justify-content: center;
   }
 }
+
+
 

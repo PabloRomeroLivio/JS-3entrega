@@ -26,10 +26,9 @@ body {
 
 
 header h1 {
-  font-size: 150px;
+  font-size: 4.5rem;
   color: $color-titulo-principal;
-  display: flex;
-  justify-content: center;
+  white-space: nowrap;
 }
 
 div {
@@ -38,12 +37,16 @@ div {
   color: $color-titulos-h2;
   display: flex;
   justify-content: center;
+  text-align: center;
+  white-space: normal;
 }
   h3 {
     font-size: 50px;
     color: $color-titulos-h3;
     display: flex;
     justify-content: center;
+    text-align: center;
+    white-space: normal;
   }
   
 }

@@ -23,10 +23,9 @@ body a:active {
 }
 
 header h1 {
-  font-size: 150px;
+  font-size: 4.5rem;
   color: rgb(27, 97, 27);
-  display: flex;
-  justify-content: center;
+  white-space: nowrap;
 }
 
 div h2 {
@@ -34,12 +33,16 @@ div h2 {
   color: rgb(156, 156, 50);
   display: flex;
   justify-content: center;
+  text-align: center;
+  white-space: normal;
 }
 div h3 {
   font-size: 50px;
   color: #fff;
   display: flex;
   justify-content: center;
+  text-align: center;
+  white-space: normal;
 }
 
 .fondo-txt {
@@ -125,8 +128,9 @@ div h3 {
 
 .footer-container {
   display: grid;
-  grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5px;
 }
 .footer-container .mapa-container {
   display: flex;
@@ -170,7 +174,6 @@ div h3 {
 .col-md-4 {
   border: 1px solid black;
   padding: 20px;
-  align-items: center;
 }
 
 .tamaño-img {
@@ -195,6 +198,18 @@ div h3 {
   .footer-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  div h2 {
+    font-size: 40px;
+  }
+  div h3 {
+    font-size: 25px;
   }
 }
 
