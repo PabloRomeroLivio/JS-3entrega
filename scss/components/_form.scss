@@ -19,3 +19,10 @@
   display: flex;
   justify-content: center;
 }
+
+form {
+  input::placeholder,
+  textarea::placeholder {
+    color: black;
+  }
+}

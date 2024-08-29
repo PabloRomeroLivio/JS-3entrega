@@ -4,11 +4,19 @@
   padding: 0;
   font-family: "Moderustic", sans-serif;
   font-size: 25px;
+  color: white;
+}
+
+.fondo-txt {
+  border: 5px solid rgb(197, 82, 41);
+}
+
+h1 span {
+  color: rgb(27, 97, 27) !important;
 }
 
 body {
   background-color: rgb(0, 0, 0) !important;
-  color: white;
   margin: 0;
   padding: 0;
 }
@@ -22,10 +30,10 @@ body a:active {
   color: white;
 }
 
-header h1 {
-  font-size: 4.5rem;
-  color: rgb(27, 97, 27);
-  white-space: nowrap;
+.box-h1 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 div h2 {
@@ -36,6 +44,10 @@ div h2 {
   text-align: center;
   white-space: normal;
 }
+div h2:hover {
+  animation: bounce;
+  animation-duration: 1s;
+}
 div h3 {
   font-size: 50px;
   color: #fff;
@@ -43,13 +55,6 @@ div h3 {
   justify-content: center;
   text-align: center;
   white-space: normal;
-}
-
-.fondo-txt {
-  color: white;
-  border: 5px solid rgb(197, 82, 41);
-  margin: auto;
-  padding: 5px;
 }
 
 .cf-cookie-clasica {
@@ -110,6 +115,10 @@ div h3 {
   justify-content: center;
 }
 
+.card-text {
+  background-color: black;
+}
+
 .carousel-inner {
   width: 20%;
 }
@@ -162,6 +171,11 @@ div h3 {
   justify-content: center;
 }
 
+form input::placeholder,
+form textarea::placeholder {
+  color: black;
+}
+
 .grid-container-referencia {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -178,6 +192,10 @@ div h3 {
 
 .tamaño-img {
   width: 40%;
+  transition: transform 1s ease-in-out;
+}
+.tamaño-img:hover {
+  transform: rotateX(360deg);
 }
 
 .tamaño-logo {
@@ -186,21 +204,26 @@ div h3 {
   filter: brightness(80%);
 }
 
-@media only screen and (max-width: 1364px) {
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-custom {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+@media (min-width: 400px) and (max-width: 1350px) {
   .form-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
   .grid-container-referencia {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
   }
   .footer-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-  }
-  header h1 {
-    font-size: 1.5rem;
   }
   .navbar-toggler {
     margin-left: auto;
@@ -210,6 +233,95 @@ div h3 {
   }
   div h3 {
     font-size: 25px;
+  }
+}
+.carousel-item {
+  position: relative;
+}
+.carousel-item .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  background: radial-gradient(circle, rgba(228, 6, 6, 0.6) 0%, rgba(113, 19, 19, 0) 100%);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+}
+
+header h1 {
+  display: flex;
+  gap: 10px;
+  color: rgb(27, 97, 27) !important;
+  transition: 0.5s;
+}
+header h1 span {
+  font-size: 6.5vw;
+  transition: 0.5s;
+  animation-name: aparicion;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+header h1 span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+header h1 span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+header h1 span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+header h1 span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+header h1 span:nth-child(5) {
+  animation-delay: 1s;
+}
+header h1 span:nth-child(6) {
+  animation-delay: 1.2s;
+}
+header h1 span:nth-child(7) {
+  animation-delay: 1.4s;
+}
+header h1 span:nth-child(8) {
+  animation-delay: 1.6s;
+}
+header h1 span:nth-child(9) {
+  animation-delay: 1.8s;
+}
+header h1 span:nth-child(10) {
+  animation-delay: 2s;
+}
+header h1 span:nth-child(11) {
+  animation-delay: 2.2s;
+}
+header h1 span:nth-child(12) {
+  animation-delay: 2.4s;
+}
+header h1 span:nth-child(13) {
+  animation-delay: 2.6s;
+}
+header h1 span:nth-child(14) {
+  animation-delay: 2.8s;
+}
+header h1 span:hover {
+  transform: scale(1.5);
+}
+
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

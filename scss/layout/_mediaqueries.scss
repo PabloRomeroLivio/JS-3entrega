@@ -1,19 +1,16 @@
 
-@media only screen and (max-width: 1364px) {
+@media (min-width: 400px) and (max-width: 1350px) {
   .form-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr); 
+    grid-template-rows: repeat(6, 1fr); 
   }
   .grid-container-referencia {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
   }
   .footer-container{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-  }
-  header h1 {
-    font-size: 1.5rem;
   }
   .navbar-toggler {
       margin-left: auto;

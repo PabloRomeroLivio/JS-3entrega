@@ -3,11 +3,19 @@
   padding: 0;
   font-family: "Moderustic", sans-serif;
   font-size: 25px;
+  color: white;
+}
+
+.fondo-txt {
+  border: 5px solid rgb(197, 82, 41);
+}
+
+h1 span{
+  color: $color-titulo-principal !important
 }
 
 body {
   background-color: $color-fondo !important;
-  color: white;
   margin: 0;
   padding: 0;
 
@@ -24,11 +32,10 @@ body {
   }
 }
 
-
-header h1 {
-  font-size: 4.5rem;
-  color: $color-titulo-principal;
-  white-space: nowrap;
+.box-h1 {
+display: flex;
+justify-content: center;
+margin: auto;
 }
 
 div {
@@ -39,6 +46,10 @@ div {
   justify-content: center;
   text-align: center;
   white-space: normal;
+  &:hover {
+  animation: bounce;
+  animation-duration: 1s;
+  }
 }
   h3 {
     font-size: 50px;
@@ -50,13 +61,5 @@ div {
   }
   
 }
-
-.fondo-txt {
-  color: white;
-  border: 5px solid rgb(197, 82, 41);
-  margin: auto;
-  padding: 5px;
-}
-
 
 
