@@ -1,7 +1,7 @@
 .grid-card {
   border: 1px solid black;
-  padding: auto;
-  margin: auto;
+  padding: 2rem;
+  margin: 2rem auto;
   text-align: center;
   align-items: center;
   display: flex;
@@ -11,4 +11,7 @@
 
 .card-text  {
   background-color: black;
+  padding: 1rem;
+  border-radius: 10px;
+
 }

@@ -18,11 +18,36 @@
   background-color: grey;
   display: flex;
   justify-content: center;
+  border-radius: 10px;
 }
 
 form {
   input::placeholder,
   textarea::placeholder {
-    color: black;
+    color: #999;
   }
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: black;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  
+  &:focus {
+    border-color: rgb(197, 82, 41); 
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+  height: 150px;
 }

@@ -22,3 +22,20 @@
     font-size: 25px;
   }
 }
+
+
+.card {
+  width: 12rem; 
+
+  @media (min-width: 1450px) and (max-width: 1699px) {
+    width: 14rem; 
+  }
+
+  @media (min-width: 1700px) and (max-width: 1899px) {
+    width: 17rem; 
+  }
+
+  @media (min-width: 1900px) {
+    width: 20rem; 
+  }
+}

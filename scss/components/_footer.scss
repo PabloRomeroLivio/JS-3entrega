@@ -2,6 +2,7 @@
     @include grid (2, 1, 5px);
 
   .mapa-container{
+    padding: 10px;
     display: flex;
     justify-content: center;
   }

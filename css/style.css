@@ -7,8 +7,196 @@
   color: white;
 }
 
+.cf-cookie-clasica {
+  background: #A04747;
+  border-radius: 10px;
+}
+.cf-cookie-clasica:hover {
+  background-color: #7d3737;
+}
+
+.cf-cookie-brownie {
+  background: #D8A25E;
+  border-radius: 10px;
+}
+.cf-cookie-brownie:hover {
+  background-color: #ce8a35;
+}
+
+.cf-cookie-limon {
+  background: #b4a64a;
+  border-radius: 10px;
+}
+.cf-cookie-limon:hover {
+  background-color: #90853b;
+}
+
+.cf-cookie-dulce-de-leche {
+  background: #A04747;
+  border-radius: 10px;
+}
+.cf-cookie-dulce-de-leche:hover {
+  background-color: #7d3737;
+}
+
+.cf-cookie-avellanas {
+  background: #D8A25E;
+  border-radius: 10px;
+}
+.cf-cookie-avellanas:hover {
+  background-color: #ce8a35;
+}
+
+.cf-cookie-de-chocolate-blanco {
+  background: #beaf4d;
+  border-radius: 10px;
+}
+.cf-cookie-de-chocolate-blanco:hover {
+  background-color: #9e913a;
+}
+
+.grid-card {
+  border: 1px solid black;
+  padding: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-text {
+  background-color: black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  width: 20%;
+}
+.carousel-inner img {
+  margin: auto;
+  border-radius: 15px;
+}
+
+.tamaño-img-carousel {
+  width: 50%;
+}
+
+.d-block.w-100 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5px;
+}
+.footer-container .mapa-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.footer-container .nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.col-enviar {
+  border: 5px solid black;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #999;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  color: black;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border-color: rgb(197, 82, 41);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+.grid-container-referencia {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin: auto;
+}
+
+.col-md-4 {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.tamaño-img {
+  width: 60%;
+  padding: 10px;
+  border-radius: 15px;
+  transition: transform 1s ease-in-out;
+}
+.tamaño-img:hover {
+  transform: rotateX(360deg);
+}
+
+.tamaño-logo {
+  width: 20%;
+  border-radius: 100%;
+  filter: brightness(80%);
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-custom {
+  background-color: rgb(0, 0, 0) !important;
+}
+
 .fondo-txt {
   border: 5px solid rgb(197, 82, 41);
+  padding: 20px;
+  border-radius: 15px;
 }
 
 h1 span {
@@ -57,161 +245,6 @@ div h3 {
   white-space: normal;
 }
 
-.cf-cookie-clasica {
-  background: rgb(185, 163, 163);
-  border-radius: 10px;
-}
-.cf-cookie-clasica:hover {
-  background-color: #a38686;
-}
-
-.cf-cookie-brownie {
-  background: rgb(186, 186, 36);
-  border-radius: 10px;
-}
-.cf-cookie-brownie:hover {
-  background-color: #8f8f1c;
-}
-
-.cf-cookie-limon {
-  background: rgb(117, 168, 40);
-  border-radius: 10px;
-}
-.cf-cookie-limon:hover {
-  background-color: #587f1e;
-}
-
-.cf-cookie-dulce-de-leche {
-  background: rgb(105, 41, 41);
-  border-radius: 10px;
-}
-.cf-cookie-dulce-de-leche:hover {
-  background-color: #441b1b;
-}
-
-.cf-cookie-avellanas {
-  background: rgb(93, 29, 81);
-  border-radius: 10px;
-}
-.cf-cookie-avellanas:hover {
-  background-color: #36112f;
-}
-
-.cf-cookie-de-chocolate-blanco {
-  background: rgb(50, 30, 109);
-  border-radius: 10px;
-}
-.cf-cookie-de-chocolate-blanco:hover {
-  background-color: #201345;
-}
-
-.grid-card {
-  border: 1px solid black;
-  padding: auto;
-  margin: auto;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.card-text {
-  background-color: black;
-}
-
-.carousel-inner {
-  width: 20%;
-}
-.carousel-inner img {
-  margin: auto;
-}
-
-.tamaño-img-carousel {
-  width: 50%;
-}
-
-.d-block.w-100 {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 5px;
-}
-.footer-container .mapa-container {
-  display: flex;
-  justify-content: center;
-}
-.footer-container .nav-container {
-  display: flex;
-  justify-content: center;
-}
-
-.form-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.col-enviar {
-  border: 5px solid black;
-  background-color: grey;
-  display: flex;
-  justify-content: center;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-  color: black;
-}
-
-.grid-container-referencia {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  align-items: center;
-  margin: auto;
-}
-
-.col-md-4 {
-  border: 1px solid black;
-  padding: 20px;
-}
-
-.tamaño-img {
-  width: 40%;
-  transition: transform 1s ease-in-out;
-}
-.tamaño-img:hover {
-  transform: rotateX(360deg);
-}
-
-.tamaño-logo {
-  width: 20%;
-  border-radius: 100%;
-  filter: brightness(80%);
-}
-
-.navbar-toggler {
-  margin-left: auto;
-}
-
-.navbar-custom {
-  background-color: rgb(0, 0, 0) !important;
-}
-
 @media (min-width: 400px) and (max-width: 1350px) {
   .form-grid {
     grid-template-columns: 1fr;
@@ -235,6 +268,25 @@ form textarea::placeholder {
     font-size: 25px;
   }
 }
+.card {
+  width: 12rem;
+}
+@media (min-width: 1450px) and (max-width: 1699px) {
+  .card {
+    width: 14rem;
+  }
+}
+@media (min-width: 1700px) and (max-width: 1899px) {
+  .card {
+    width: 17rem;
+  }
+}
+@media (min-width: 1900px) {
+  .card {
+    width: 20rem;
+  }
+}
+
 .carousel-item {
   position: relative;
 }
