@@ -17,6 +17,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+  <!-- tostify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,12 +75,12 @@
   </header>
 
   <main>
-    <div id="productossect">
+    <div id="productossect" class="container mt-4">
     <div class="container-fluid">
       <div class="row">
         <h2 id="prod">Productos</h2>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-producto-id="1">
           <h3 class="cf-cookie-clasica">Cookie clásica</h3>
 
           <div class="d-flex justify-content-center align-items-center">
@@ -93,7 +95,7 @@
             disfrutar la calidad y el cariño puestos en cada cookie. ¡Te esperamos en Cookie Monkey!</p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-producto-id="2">
           <h3 class="cf-cookie-brownie">Cookie brownie</h3>
 
           <div class="d-flex justify-content-center align-items-center">
@@ -108,7 +110,7 @@
             puestos en cada creación. ¡Te esperamos en Cookie Monkey!</p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-producto-id="3">
           <h3 class="cf-cookie-limon">Cookie limon</h3>
           <div class="d-flex justify-content-center align-items-center">
             <img class="tamaño-img" src="./imagenes/Cookie.limon.png" alt="Cookie limon">
@@ -121,7 +123,7 @@
             nuestro compromiso con la calidad y la dedicación en cada creación. ¡Te esperamos en Cookie Monkey!</p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-producto-id="4">
           <h3 class="cf-cookie-dulce-de-leche">Cookie dulce de leche</h3>
 
           <div class="d-flex justify-content-center align-items-center">
@@ -135,7 +137,7 @@
             y al esmero en cada creación. ¡Te esperamos en Cookie Monkey!</p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-producto-id="5">
           <h3 class="cf-cookie-avellanas">Cookie avellanas</h3>
           <div class="d-flex justify-content-center align-items-center">
             <img class="tamaño-img" src="./imagenes/Cookie.avellana.png" alt="Cookie avellana">
@@ -148,7 +150,7 @@
             por la calidad y el esmero en cada creación. ¡Te esperamos en Cookie Monkey!</p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-producto-id="6">
           <h3 class="cf-cookie-de-chocolate-blanco">Cookie de Chocolate Blanco </h3>
           <div class="d-flex justify-content-center align-items-center">
             <img class="tamaño-img" src="./imagenes/cookie-choco-ddl.png" alt="blanco y ddl">
@@ -160,10 +162,11 @@
             Cookies!</p>
         </div>
 
-        <a href="#inicio">Volver al inicio</a>
+        
       </div>
     </div>
   </div>
+  <a href="#inicio">Volver al inicio</a>
     <div>
       <h2 id="galeria">Galeria</h2>
       <div id="carouselExample" class="carousel slide">
@@ -458,7 +461,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <!-- tostify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+
+    <script src="js/gestionarProductos.js"></script>
     <script src="./js/mainjs.js"></script>
+    
 </body>
 
 </html>

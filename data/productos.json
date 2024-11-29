@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": 1,
+    "nombre": "Cookie clásica",
+    "precio": 1.50
+  },
+  {
+    "id": 2,
+    "nombre": "Cookie brownie",
+    "precio": 1.50
+  },
+  {
+    "id": 3,
+    "nombre": "Cookie limón",
+    "precio": 1.50
+  },
+  {
+    "id": 4,
+    "nombre": "Cookie dulce de leche",
+    "precio": 2.00
+  },
+  {
+    "id": 5,
+    "nombre": "Cookie avellanas",
+    "precio": 1.50
+  },
+  {
+    "id": 6,
+    "nombre": "Cookie chocolate blanco",
+    "precio": 2.00
+  }
+]

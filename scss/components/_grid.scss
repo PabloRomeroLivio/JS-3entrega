@@ -28,3 +28,90 @@
   color: white!important;
 
 }
+
+.text-muted.text-center{
+  color: red !important;
+}
+
+/* Fondo negro y texto blanco */
+.swal2-popup {
+  background-color: #000 !important; /* Fondo negro */
+  color: #fff !important; /* Texto blanco */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+/* Color del título */
+.swal2-title {
+  color: #fff !important; /* Texto blanco */
+}
+
+/* Color del texto */
+.swal2-html-container {
+  color: #fff !important; /* Texto blanco */
+}
+
+/* Personalización del icono de check */
+.swal2-success {
+  border-color: white !important; /* Borde del círculo del check en naranja */
+}
+
+.swal2-success-circular-line-left,
+.swal2-success-circular-line-right {
+  background-color: black !important; /* Líneas del círculo en naranja */
+}
+
+.swal2-success-fix {
+  background-color: black !important; /* Arreglo del ícono en naranja */
+}
+
+.swal2-success-line-tip,
+.swal2-success-line-long {
+  background-color: orange !important; /* Check en naranja */
+}
+
+/* Botón de confirmación personalizado */
+.swal2-confirm {
+  background-color: #333 !important; /* Fondo del botón */
+  color: #fff !important; /* Texto blanco */
+  border: none !important; /* Sin bordes */
+}
+
+.swal2-confirm:hover {
+  background-color: #555 !important; /* Fondo más claro al pasar el ratón */
+}
+
+
+
+/* Estilos exclusivos para los botones de producto */
+.product-button {
+  width: 40%; /* Ocupa el 50% del ancho */
+  padding: 5px 0; /* Ajusta el espacio interno */
+  text-align:none; /* Centra el texto */
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#productossect .badge {
+  background-color: black !important; /* Fondo negro */
+  color: white !important;           /* Texto blanco */
+  font-weight: bold;                 /* Opcional: negrita */
+}
+
+#productossect .list-group-item {
+  background-color: black !important; /* Fondo negro para toda la línea */
+  color: white !important;            /* Texto en blanco */
+  display: flex;                      /* Asegura que nombre y subtotal estén alineados */
+  justify-content: space-between;     /* Espaciado entre el nombre y el subtotal */
+  align-items: center;                /* Alineación vertical */
+  padding: 10px;                      /* Opcional: espaciado interno */
+  border: 1px solid orange;           /* Opcional: bordes naranjas */
+}
+
+#productossect .list-group-item .badge {
+  background-color: transparent; /* Fondo transparente para el número */
+  color: orange !important;      /* Números en naranja */
+  font-weight: bold;
+}
