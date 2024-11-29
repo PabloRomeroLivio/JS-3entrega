@@ -57,16 +57,17 @@
 
 .grid-card {
   border: 1px solid black;
-  padding: 2rem;
-  margin: 2rem auto;
+  padding: none !important;
+  margin: none;
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: center;
+  background-color: black !important;
 }
 
 .card-text {
-  background-color: black;
+  background-color: black !important;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -164,6 +165,15 @@ textarea {
   margin: auto;
 }
 
+.card-img-top {
+  border-radius: 5px !important; /* Elimina el radio de las esquinas */
+}
+
+.card {
+  border: 0.2rem solid orange !important;
+  background-color: #000 !important;
+}
+
 .col-md-4 {
   border: 1px solid black;
   padding: 20px;
@@ -226,46 +236,46 @@ textarea {
 
 /* Botón de confirmación personalizado */
 .swal2-confirm {
-  background-color: #333 !important; /* Fondo del botón */
-  color: #fff !important; /* Texto blanco */
-  border: none !important; /* Sin bordes */
+  background-color: #333 !important;
+  color: #fff !important;
+  border: none !important;
 }
 
 .swal2-confirm:hover {
-  background-color: #555 !important; /* Fondo más claro al pasar el ratón */
+  background-color: #555 !important;
 }
 
 /* Estilos exclusivos para los botones de producto */
 .product-button {
-  width: 40%; /* Ocupa el 50% del ancho */
-  padding: 5px 0; /* Ajusta el espacio interno */
-  text-align: none; /* Centra el texto */
-  background-color: #333; /* Fondo oscuro */
-  color: white; /* Texto blanco */
-  border: none; /* Sin bordes */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  width: 40%;
+  padding: 5px 0;
+  text-align: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #productossect .badge {
-  background-color: black !important; /* Fondo negro */
-  color: white !important; /* Texto blanco */
-  font-weight: bold; /* Opcional: negrita */
+  background-color: black !important;
+  color: white !important;
+  font-weight: bold;
 }
 
 #productossect .list-group-item {
-  background-color: black !important; /* Fondo negro para toda la línea */
-  color: white !important; /* Texto en blanco */
-  display: flex; /* Asegura que nombre y subtotal estén alineados */
-  justify-content: space-between; /* Espaciado entre el nombre y el subtotal */
-  align-items: center; /* Alineación vertical */
-  padding: 10px; /* Opcional: espaciado interno */
-  border: 1px solid orange; /* Opcional: bordes naranjas */
+  background-color: black !important;
+  color: white !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid orange;
 }
 
 #productossect .list-group-item .badge {
-  background-color: transparent; /* Fondo transparente para el número */
-  color: orange !important; /* Números en naranja */
+  background-color: transparent;
+  color: orange !important;
   font-weight: bold;
 }
 
@@ -398,6 +408,18 @@ div h3 {
   }
 }
 
+@media (max-width: 1000px) {
+  #productossect .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #productossect .col-md-4 {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
 .carousel-item {
   position: relative;
 }

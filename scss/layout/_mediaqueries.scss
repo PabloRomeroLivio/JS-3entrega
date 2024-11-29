@@ -39,3 +39,17 @@
     width: 20rem; 
   }
 }
+
+@media (max-width: 1000px) {
+  #productossect .row {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+  }
+
+  #productossect .col-md-4 {
+    min-width: 100%;
+    max-width: 100%;       
+    margin-bottom: 1.5rem;  
+  }
+}

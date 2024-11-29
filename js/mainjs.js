@@ -7,7 +7,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 // Ruta al archivo JSON
 const urlJSON = "./data/productos.json";
 
-// Función para guardar el carrito en localStorage
+// Función para guardar el carrito en local
 function guardarCarrito() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
@@ -42,12 +42,12 @@ function agregarProducto(nombre, precio) {
     title: 'Producto agregado',
     text: `${nombre} se ha añadido al carrito.`,
     timer: 1500,
-    showConfirmButton: true, // Puedes cambiarlo a false si no deseas botón
+    showConfirmButton: true, 
     customClass: {
-      popup: 'swal2-popup',         // Clase para el contenedor
-      title: 'swal2-title',         // Clase para el título
-      htmlContainer: 'swal2-html-container', // Clase para el texto
-      confirmButton: 'swal2-confirm' // Clase para el botón confirmar
+      popup: 'swal2-popup',        
+      title: 'swal2-title',         
+      htmlContainer: 'swal2-html-container', 
+      confirmButton: 'swal2-confirm' 
     },
   });
 }
@@ -117,11 +117,9 @@ function generarInterfazProductos(productos) {
   listaCarrito.id = 'listaCarrito';
 
   productos.forEach(producto => {
-    // Seleccionar el div con la clase col-md-4 existente en el HTML
     const divProducto = document.querySelector(`.col-md-4[data-producto-id="${producto.id}"]`);
 
     if (divProducto) {
-      // Crear los botones y agregar eventos usando la función 'crearElemento'
       const btnSumar = crearElemento('button', 'btn btn-success mx-2 product-button', 'Agregar', () => {
         agregarProducto(producto.nombre, producto.precio);
         actualizarListaCarrito();
@@ -155,7 +153,7 @@ function generarInterfazProductos(productos) {
 // Nueva función para actualizar la lista de productos en el carrito
 function actualizarListaCarrito() {
   const listaCarrito = document.getElementById('listaCarrito');
-  listaCarrito.innerHTML = ''; // Limpiar la lista actual
+  listaCarrito.innerHTML = ''; 
 
   carrito.forEach(item => {
     const itemLista = crearElemento(
@@ -344,4 +342,59 @@ document.addEventListener('DOMContentLoaded', () => {
     loginButton.addEventListener('click', iniciarSesion);
     registerButton.addEventListener('click', registrarUsuario);
   }
+});
+
+
+
+
+// ----------------------------------------------------- 
+
+// Crear objetos  (reutilizable)
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Clase Testimonial
+  class Testimonial {
+    constructor(nombre, texto, imagen) {
+      this.nombre = nombre;
+      this.texto = texto;
+      this.imagen = imagen;
+    }
+
+    generarHTML() {
+      return `
+        <div class="grid-card">
+          <div class="card">
+            <img src="${this.imagen}" class="card-img-top" alt="icono ${this.nombre}">
+            <div class="card-body">
+              <p class="card-text"><strong>${this.nombre}</strong><br>"${this.texto}"</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  // Array de testimonios
+  const testimonios = [
+    new Testimonial("María G.", "Desde que descubrí Cookie Monkey, no puedo dejar de venir. La atención es siempre amable y personalizada, y las cookies son simplemente las mejores que he probado. Mi favorita es la de limón, es fresca y deliciosa. Recomiendo a todos que pasen por aquí y prueben estas delicias. ¡Gracias por todo, equipo de Cookie Monkey!", "./imagenes/icono-mujer.png"),
+    new Testimonial("Carlos R.", "Llevo a mis hijos a Cookie Monkey cada semana y siempre es una alegría. Les encantan las cookies rellenas de dulce de leche, y yo disfruto del ambiente acogedor y el servicio atento. La ubicación en el corazón de Barcelona es perfecta para nuestras salidas familiares. ¡Sin duda, las mejores galletas de la ciudad!", "./imagenes/icono-hombre.png"),
+    new Testimonial("Lucía M.", "Soy fan de las galletas de avena y pasas, y las de Cookie Monkey son simplemente sublimes. Me encanta cómo cuidan cada detalle, desde la frescura de los ingredientes hasta la presentación. El personal es siempre tan amable y servicial. ¡No puedo esperar a mi próxima visita!", "./imagenes/icono-mujer.png"),
+    new Testimonial("Javier L.", "Trabajo cerca de Cookie Monkey y es mi lugar favorito para una pausa dulce. La cookie de brownie es increíble, rica y perfecta para recargar energías. La atención siempre es rápida y cordial, y el local es muy cómodo. ¡Un sitio que siempre recomiendo!", "./imagenes/icono-hombre.png"),
+    new Testimonial("Elena S.", "Descubrí Cookie Monkey por recomendación de un amigo, y fue amor al primer bocado. La cookie de mantequilla de maní es mi perdición. Además, el equipo es siempre tan amable y atento. La ubicación es ideal y el ambiente muy acogedor. ¡Gracias por las mejores galletas!", "./imagenes/icono-mujer.png"),
+    new Testimonial("Miguel T.", "Cada vez que paso por Barcelona, una parada obligatoria es Cookie Monkey. La variedad y calidad de las galletas es impresionante. Mi preferida es la de coco y chocolate blanco, ¡es como un trocito de paraíso! Además, la atención siempre es de primera. ¡Sigan así!", "./imagenes/icono-hombre.png"),
+    new Testimonial("Sofía P.", "Llevé a mis amigas a Cookie Monkey y todas quedamos encantadas. El local es muy acogedor y el personal muy atento. Las cookies de chispas de chocolate fueron un éxito total. Es el lugar perfecto para reunirse y disfrutar de un momento dulce. ¡Gracias por todo!", "./imagenes/icono-mujer.png"),
+    new Testimonial("David H.", "La primera vez que entré a Cookie Monkey, me sentí como en casa. El aroma a galletas recién horneadas es irresistible. La cookie de avellanas es mi favorita, crujiente y deliciosa. El personal es siempre tan amable y servicial. ¡Un lugar que recomiendo sin dudar!", "./imagenes/icono-hombre.png"),
+    new Testimonial("Ana B.", "Cookie Monkey ha superado todas mis expectativas. La cookie de limón es simplemente perfecta, con un sabor fresco y equilibrado. La atención es siempre excelente y el ambiente muy acogedor. Me encanta venir aquí y disfrutar de estas delicias. ¡Gracias por ser tan geniales!", "./imagenes/icono-mujer.png")
+  ];
+
+  // Función para renderizar los testimonios
+  function renderizarTestimonios() {
+    const contenedorReferencias = document.querySelector('#referencias');
+    testimonios.forEach(testimonio => {
+      contenedorReferencias.innerHTML += testimonio.generarHTML();
+    });
+  }
+
+  // Llamar a la función para renderizar los testimonios
+  renderizarTestimonios();
 });
